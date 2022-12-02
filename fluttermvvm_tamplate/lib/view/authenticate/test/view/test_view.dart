@@ -13,7 +13,7 @@ class _TestViewState extends BaseState<TestView> {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-        viewModel: 'Hayat eve sığar',
+        viewModel: 'Nerde nerde nerdesin dost',
         onPageBuilder: (context, value) => const Text('data'));
   }
 }
