@@ -11,10 +11,28 @@ class TestView extends StatefulWidget {
 }
 
 class _TestViewState extends BaseState<TestView> {
+  late TestViewModel viewModel;
   @override
   Widget build(BuildContext context) {
     return BaseView<TestViewModel>(
         viewModel: TestViewModel(),
+        onModelReady: (model) {
+          viewModel = model;
+        },
         onPageBuilder: (context, value) => const Text('data'));
+  }
+
+  Widget get scaffoldBody => Scaffold(
+        floatingActionButton: flutterActionButtomNumberIncrement(),
+        body: textNumber,
+      );
+
+  FloatingActionButton flutterActionButtomNumberIncrement() =>
+      FloatingActionButton(onPressed: () => viewModel.incremntNumber());
+
+  Widget get textNumber {
+    return Observer(
+      builder: (context) => Text(viewModel.number.toString()),
+    );
   }
 }
