@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermvm_tamplate/core/base/state/base_state.dart';
+import 'package:fluttermvm_tamplate/core/base/view/base_widget.dart';
 
 class TestView extends StatefulWidget {
   const TestView({super.key});
@@ -11,11 +12,8 @@ class TestView extends StatefulWidget {
 class _TestViewState extends BaseState<TestView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: dynamicHeight(0.2),
-      color: themeData.primaryColor,
-      height: dynamicHeight(0.50),
-      child: const Placeholder(),
-    );
+    return BaseView(
+        viewModel: 'Hayat eve sığar',
+        onPageBuilder: (context, value) => const Text('data'));
   }
 }
