@@ -29,7 +29,7 @@ mixin _$TestViewModel on _TestViewModelBase, Store {
       ActionController(name: '_TestViewModelBase', context: context);
 
   @override
-  void incremntNumber() {
+  void incrementNumber() {
     final _$actionInfo = _$_TestViewModelBaseActionController.startAction(
         name: '_TestViewModelBase.incremntNumber');
     try {
