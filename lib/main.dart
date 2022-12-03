@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(EasyLocalization(child: MyApp(), supportedLocales: supportedLocales, path: path));
+void main() => runApp(EasyLocalization(child: MyApp(), supportedLocales:null, path: null));
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
