@@ -2,7 +2,7 @@
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttermvm_tamplate/core/constants/app/app_contstants.dart';
+import 'package:fluttermvm_tamplate/core/constants/app/app_constants.dart';
 import 'package:fluttermvm_tamplate/core/init/lang/language_manager.dart';
 
 void main() => runApp(EasyLocalization(
