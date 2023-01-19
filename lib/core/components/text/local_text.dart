@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvm_tamplate/core/extension/string_extension.dart';
+import '../../extension/string_extension.dart';
 
 class LocalText extends StatelessWidget {
   const LocalText({super.key, required this.value});
