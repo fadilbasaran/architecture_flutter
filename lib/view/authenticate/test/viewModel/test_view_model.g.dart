@@ -31,9 +31,9 @@ mixin _$TestViewModel on _TestViewModelBase, Store {
   @override
   void incrementNumber() {
     final _$actionInfo = _$_TestViewModelBaseActionController.startAction(
-        name: '_TestViewModelBase.incremntNumber');
+        name: '_TestViewModelBase.incrementNumber');
     try {
-      return super.incremntNumber();
+      return super.incrementNumber();
     } finally {
       _$_TestViewModelBaseActionController.endAction(_$actionInfo);
     }

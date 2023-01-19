@@ -4,7 +4,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttermvm_tamplate/core/constants/app/app_contstants.dart';
 import 'package:fluttermvm_tamplate/core/init/lang/language_manager.dart';
+import 'package:fluttermvm_tamplate/core/notifier/provider_list.dart';
+import 'package:fluttermvm_tamplate/core/notifier/theme_notifier.dart';
 import 'package:fluttermvm_tamplate/view/authenticate/test/view/test_view.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(EasyLocalization(
     child: const MyApp(),
@@ -18,6 +21,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TestView();
+    return MultiProvider(
+        providers: [...ApplicationPorvider.instance!.dependItems],
+        child: MaterialApp(
+          home: const TestView(),
+          theme:
+              Provider.of<ThemeNotifier>(context, listen: false).currentTheme,
+        ));
   }
 }
