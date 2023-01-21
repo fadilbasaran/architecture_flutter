@@ -7,6 +7,6 @@ class LocalText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Text(value.locale);
+    return Text(value.locale);//Added to text
   }
 }
