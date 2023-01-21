@@ -10,6 +10,6 @@ class AppThemeLight extends AppTheme {
   }
 
   AppThemeLight._init();
-
+  @override
   ThemeData get theme => ThemeData.light();
 }
